@@ -85,7 +85,7 @@ app.post("/", (req, res) => {
         foundList.items.push(item);
         foundList.save();
         console.log("New item successfully added to the "+ listName + " list");
-        res.redirect("/"+_.toLower(listName));
+        res.redirect("/list/"+_.toLower(listName));
       }
     });
   }
@@ -107,7 +107,7 @@ app.post("/delete", (req,res) => {
     List.findOneAndUpdate({name:listName}, {$pull:{items:{_id:checkedItemId}}}, (err,foundList) => {
       if(!err){
         console.log("Selected Item successfully removed from the "+listName+" list");
-        res.redirect("/"+listName);
+        res.redirect("/list/"+_.toLower(listName));
       }
     });
   }
@@ -117,7 +117,7 @@ app.get("/about", (req, res) => {
   res.render("about");
 });
 
-app.get("/:customListName", (req, res) => {
+app.get("/list/:customListName", (req, res) => {
   const customListName = _.capitalize(req.params.customListName);
 
   List.findOne({name: customListName}, (err, foundList) => {
@@ -129,7 +129,7 @@ app.get("/:customListName", (req, res) => {
           items: defaultItems
         });
         list.save();
-        res.redirect("/"+_.toLower(customListName));
+        res.redirect("/list/"+_.toLower(customListName));
       }else {
         //Show an existing list
         res.render("list", {
