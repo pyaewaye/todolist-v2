@@ -2,7 +2,7 @@
 This is a To Do List app to maintain your day-to-day tasks. You can also create custom to-do-list simply by appending /list/YourCustomListName in the url. Fill in the item and click + button to add, tick the checkbox to remove the item. 
 
 # Try it out online 
-This service uses free plan hosting and can cause a delay of up to 30 seconds on first load.
+This service uses free plan hosting and may cause a delay of up to 30 seconds on first load.
 https://todolist-ut3j.onrender.com
 
 ### Dependencies
