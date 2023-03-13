@@ -1,8 +1,8 @@
 # To Do List App
-This is a To Do List app to maintain your day-to-day tasks. Other than the main to-do page, you can also create custom to-do pages simply by appending /list/YourCustomListName in the url. Fill in the task and click + button to add, check it out to remove. For every new page, suggested 3 default tasks for you!
+This is a To Do List app to maintain your day-to-day tasks. You can also create custom to-do-list simply by appending /list/YourCustomListName in the url. Fill in the item and click + button to add, tick the checkbox to remove the item. 
 
-#Try it out online
-Start planning your daily tasks and get organised anytime, anywhere at the following link. This service uses free plan hosting and can cause a delay of up to 30 seconds on first load. Multi-users feature currently not available.
+# Try it out online 
+This service uses free plan hosting and can cause a delay of up to 30 seconds on first load.
 https://todolist-ut3j.onrender.com
 
 ### Dependencies
